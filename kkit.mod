@@ -1,0 +1,2 @@
+/root/kkit/kkit.o
+

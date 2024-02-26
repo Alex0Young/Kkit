@@ -1,0 +1,1 @@
+cmd_/root/kkit/kkit.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -z noexecstack   --build-id  -T ./scripts/module-common.lds -o /root/kkit/kkit.ko /root/kkit/kkit.o /root/kkit/kkit.mod.o;  true
