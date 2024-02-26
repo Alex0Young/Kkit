@@ -178,7 +178,7 @@ static __init int shell_test1(void)
 static __init int shell_test2(void)
 {
     int result = 0;
-    char cmd_path[] = "/tmp/tc";
+    char cmd_path[] = "/tmp/ukk_tc";
     char* cmd_argv[] = {cmd_path, NULL ,NULL};
     char* cmd_envp[] = {"HOME=/", "PATH=/sbin:/bin:/usr/bin", NULL};
 

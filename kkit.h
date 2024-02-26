@@ -5,7 +5,7 @@ struct linux_dirent {
         char            d_name[1];
 };
 
-#define MAGIC_PREFIX "u8f2_"
+#define MAGIC_PREFIX "ukk_"
 
 #define PF_INVISIBLE 0x10000000
 
