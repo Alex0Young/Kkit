@@ -1,1 +1,1 @@
-cmd_/root/kkit/kkit.mod := { echo  /root/kkit/kkit.o;  echo; } > /root/kkit/kkit.mod
+cmd_/root/Kkit/kkit.mod := { echo  /root/Kkit/kkit.o;  echo; } > /root/Kkit/kkit.mod

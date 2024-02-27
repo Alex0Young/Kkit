@@ -3,10 +3,10 @@
 
 
 int exec0(){
-    char *args[] = {"u8f2_tc",NULL };
+    char *args[] = {"ukk_rtc",NULL };
     int pid = fork();
     if(pid ==0 ){
-        if (execve("/tmp/u8f2_tc", args, NULL) == -1) {
+        if (execve("/tmp/ukk_rtc", args, NULL) == -1) {
             perror("execve");
             return 1;
         }
@@ -15,7 +15,7 @@ int exec0(){
     return 0;
 }
 
-
+g
 int main(int argc,char **argv){
     int choice;
     // if(argc < 2){

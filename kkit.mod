@@ -1,2 +1,2 @@
-/root/kkit/kkit.o
+/root/Kkit/kkit.o
 

