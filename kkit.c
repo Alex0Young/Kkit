@@ -652,6 +652,4 @@ kkit_cleanup(void)
 module_init(kkit_init);
 module_exit(kkit_cleanup);
 
-MODULE_LICENSE("Dual BSD/GPL");
-MODULE_AUTHOR("m0nad");
 MODULE_DESCRIPTION("LKM rootkit");
